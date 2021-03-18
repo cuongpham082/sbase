@@ -10,7 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.hc.workmate.model.User;
+import com.hc.workmate.tenant.model.User;
 
 public class UserDetailsImpl implements UserDetails {
 

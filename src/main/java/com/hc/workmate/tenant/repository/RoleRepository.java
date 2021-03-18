@@ -1,12 +1,12 @@
-package com.hc.workmate.repository;
+package com.hc.workmate.tenant.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.hc.workmate.model.ERole;
-import com.hc.workmate.model.Role;
+import com.hc.workmate.tenant.model.ERole;
+import com.hc.workmate.tenant.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {

@@ -1,4 +1,4 @@
-package com.hc.workmate.model;
+package com.hc.workmate.tenant.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,6 +19,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hc.workmate.tenant.model.Role;
 
 @Entity
 @Table(	name = "users", 

@@ -1,7 +1,7 @@
 package com.hc.workmate.tenant.config;
 
 import com.hc.workmate.mastertenant.config.DBContextHolder;
-import com.hc.workmate.mastertenant.entity.MasterTenant;
+import com.hc.workmate.mastertenant.model.MasterTenant;
 import com.hc.workmate.mastertenant.repository.MasterTenantRepository;
 import com.hc.workmate.util.DataSourceUtil;
 import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;

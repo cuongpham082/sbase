@@ -22,7 +22,7 @@ import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = { "com.hc.workmate.tenant.repository", "com.hc.workmate.tenant.entity" })
+@ComponentScan(basePackages = { "com.hc.workmate.tenant.repository", "com.hc.workmate.tenant.model" })
 @EnableJpaRepositories(basePackages = {"com.hc.workmate.tenant.repository", "com.hc.workmate.tenant.service" },
         entityManagerFactoryRef = "tenantEntityManagerFactory",
         transactionManagerRef = "tenantTransactionManager")

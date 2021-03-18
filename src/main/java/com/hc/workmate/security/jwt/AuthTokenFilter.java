@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.hc.workmate.mastertenant.service.MasterTenantService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,18 +23,21 @@ import com.hc.workmate.util.Constants;
 
 
 public class AuthTokenFilter extends OncePerRequestFilter {
-    @Autowired
-    private JwtUtils jwtUtils;
-
-    @Autowired
-    private UserDetailsServiceImpl userDetailsService;
 
     private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
+
+    @Autowired
+    private JwtUtils jwtUtils;
+    @Autowired
+    private UserDetailsServiceImpl userDetailsService;
+    @Autowired
+    private MasterTenantService masterTenantService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         try {
+            logger.info("STAND HERE00000000000000");
             if (!isUriValid(request)) {
                 if (!checkAuthorization(request)) {
                     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -64,6 +68,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
     private Boolean isUriValid(HttpServletRequest request) {
         String requestURI = request.getRequestURI();
+        logger.info("requestURI: " + requestURI);
         return requestURI.equals(Constants.LOGIN_URI)
         		|| requestURI.equals(Constants.SIGNUP_URI)
                 || requestURI.equals(Constants.TOKEN_URI)

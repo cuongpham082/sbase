@@ -1,4 +1,4 @@
-package com.hc.workmate.mastertenant.entity;
+package com.hc.workmate.mastertenant.model;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;

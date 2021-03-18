@@ -1,6 +1,6 @@
 package com.hc.workmate.mastertenant.service.impl;
 
-import com.hc.workmate.mastertenant.entity.MasterTenant;
+import com.hc.workmate.mastertenant.model.MasterTenant;
 import com.hc.workmate.mastertenant.repository.MasterTenantRepository;
 import com.hc.workmate.mastertenant.service.MasterTenantService;
 import org.slf4j.Logger;

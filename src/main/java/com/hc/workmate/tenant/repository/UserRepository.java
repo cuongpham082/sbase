@@ -1,11 +1,11 @@
-package com.hc.workmate.repository;
+package com.hc.workmate.tenant.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.hc.workmate.model.User;;
+import com.hc.workmate.tenant.model.User;;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

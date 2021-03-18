@@ -1,4 +1,4 @@
-package com.hc.workmate.model;
+package com.hc.workmate.tenant.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hc.workmate.tenant.model.ERole;
 
 @Entity
 @Table(name = "role")

@@ -1,6 +1,6 @@
 package com.hc.workmate.mastertenant.config;
 
-import com.hc.workmate.mastertenant.entity.MasterTenant;
+import com.hc.workmate.mastertenant.model.MasterTenant;
 import com.hc.workmate.mastertenant.repository.MasterTenantRepository;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = {"com.hc.workmate.mastertenant.entity", "com.hc.workmate.mastertenant.repository"},
+@EnableJpaRepositories(basePackages = {"com.hc.workmate.mastertenant.model", "com.hc.workmate.mastertenant.repository"},
         entityManagerFactoryRef = "masterEntityManagerFactory",
         transactionManagerRef = "masterTransactionManager")
 public class MasterDatabaseConfig {

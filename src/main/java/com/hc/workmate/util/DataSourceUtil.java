@@ -1,6 +1,6 @@
 package com.hc.workmate.util;
 
-import com.hc.workmate.mastertenant.entity.MasterTenant;
+import com.hc.workmate.mastertenant.model.MasterTenant;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
